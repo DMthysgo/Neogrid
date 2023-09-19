@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .code {
+            background-color: #252525;
+            color:cornsilk;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="../meuScript.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Introdução ao JavaScript</h1>
+        <p>Nesta lição, vamos aprender o básico do JavaScript.</p>
+
+        <h2>1º topico: O que é JavaScript?</h2>
+        <p>JavaScript é uma linguagem de programação de alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. Sendo usada principalmente para criar interatividade em páginas da web.</p>
+
+        <p>Observação: Diferentemente de Java, que é uma linguagem de programação independente de plataforma, JavaScript é executado no navegador do cliente.</p>
+
+        <h3>Possiveis questionamentos desse tópico:</h3>
+        <h4>O que é uma linguagem de programação de alto nível?</h4>
+        <p>Uma linguagem de programação de alto nível é uma linguagem de programação que é projetada para ser mais fácil de entender e usar para os seres humanos. Se afastando da linguagem da máquina, tendo como caracteristicas chaves, a abstração, a portabilidade, a facilidade de manutenção, e muitas vezes com diversas bibliotecas e frameworks.</p>
+
+        <h4>O que é tipagem dinâmica fraca?</h4>
+        <p>Aqui temos dois conceitos diferentes de tipagem, que se referem à forma como as linguagens de programação tratam os tipos de dados.</p>
+        <p>Na tipagem Dinâmica os tipos de dados são verificados em tempo de execução, o que significa que o interpretador ou compilador verifica os tipos de dados durante a execução do programa, à medida que as operações são realizadas.</p>
+        <p>Na tipagem Fraca as conversões implícitas entre tipos de dados são permitidas e podem ocorrer sem gerar erros. Isso significa que as operações entre tipos de dados diferentes são tratadas pelo sistema de forma a tentar realizar a operação, mesmo que isso possa não ser semanticamente válido.</p>
+        <p>Por exemplo, graças a tipagem dinâmica é possivel que no JavaScript, possamos atribuir uma string a uma variável e, em seguida, atribuir um número a essa mesma variável posteriormente no código, e o JavaScript não gera um erro até que a operação seja executada.</p>
+        <p>E por exemplo, graças a tipagem fraca é possivel somar uma string a um número, e o JavaScript tentará converter automaticamente a string em um número para realizar a operação.</p>
+        <p>Opostas as essas duas tipagens temos linguagens com "tipagem estática" e "tipagem forte" que exigem a declaração explicita dos tipos de dados e não permitem conversões automáticas entre tipos, tornando o código mais rigoroso em relação aos tipos de dados.</p>
+        
+        <h3>Exercicio desse tópico:</h3>
+        <p>Anote póssiveis dúvidas sobre o que é o JavaScript.</p>
+
+        <h2>2º topico: A Tag &lt;script&gt;</h2>
+        <p>Para adicionar JavaScript a uma página web, usamos a tag &lt;script&gt;. Ela pode ser colocada no &lt;head&gt; ou no &lt;body&gt; do documento HTML. Aqui está um exemplo:</p>
+
+        <div class="code">
+            &lt;script&gt;<br>
+            // Seu código JavaScript aqui<br>
+            &lt;/script&gt;
+        </div>
+        <p>Neste exemplo temos um script interno ao HTML, com a abertura da tag script, um comentario em linha e o fechamento da tag.</p>
+        <p>Assim como o CSS que colocamos na tag &lt;style&gt; podendo ser interno ou externo, aqui acontece o mesmo com o JavaScript, um detalhe extra é que podemos ter diversas tags &lt;script&gt; no nosso código.</p>
+        <p>Para criar um arquivo JavaScript externo é importante saber que arquivos JS possuem a extensão .js, por exemplo temos um arquivo chamado "meuScript.js" e decidimos chama-lo em nosso código HTML, para isso fazemos o seguinte:</p>
+        <div class="code">
+            &lt;script src="meuScript.js"&gt; &lt;/script&gt;
+        </div>
+        <p>Neste exemplo abrimos a tag script com o atributo source(do inglês: fonte) que se resume na sigla src, esse atributo inclui o arquivo "meuScript.js", e assim fechamos a tag script.</p>
+
+        <h3>Exercicio desse tópico:</h3>
+        <p>Crie um arquivo html, e inclua dois scripts, um interno e um externo.</p>
+
+        <h2>3º topico: Depuração e console</h2>
+        <p>O console é uma ferramenta importante para depuração, pois permite que você inspecione variáveis, visualize mensagens de erro e execute código JavaScript interativamente. Além disso você pode usar o console como um ambiente interativo para executar código JavaScript diretamente. Isso é útil para testar funções ou experimentar com código em tempo real.</p>
+        <p>Para abrir o console do navegador, normalmente você pode usar a tecla de atalho F12, Ctrl + Shift + I (ou Cmd + Option + I em sistemas macOS) ou clicar com o botão direito do mouse em qualquer lugar da página e selecionar "Inspecionar" ou "Inspecionar elemento" e, em seguida, navegar para a guia "Console".</p>
+        <p>O debug de JavaScript no console do navegador é uma habilidade fundamental para os desenvolvedores da web, pois ajuda a encontrar e corrigir erros, melhorar o desempenho e entender o comportamento de um aplicativo web em tempo real.</p>
+
+        <h3>Exercicio desse tópico:</h3>
+        <p>Abram o seu console e tentem realizar algumas contas matemáticas de adição, subtração, multiplicação e divisão.</p>
+
+        <h2>4º topico: Instruções, Sintaxe e Variáveis</h2>
+        <p>No JavaScript nós seguimos a lógica de que um programa é uma lista de "instruções" a serem "executadas" pela maquina, sendo assim nós chamamos isso de instruções ou em inglês "Statements".</p>
+
+        <h3>Instruções:</h3>
+        <p>As instruções JavaScript são compostas por: Valores, operadores, expressões, palavras-chave e comentários.</p>
+        <p>Essas instruções são executadas uma a uma na ordem que foram escritas no código.</p>
+        <p>Normalmente utilizamos ; para separar ou finalizar instruções, por exemplo a seguir temos:</p>
+        <div class="code">
+            let x, y, z;<br>
+            x = 5;<br>
+            y = 6;<br>
+            z = x + y;
+        </div>
+        <p>Nesse exemplos declaramos 3 variáveis, sendo elas <em> x, y, e z</em>, em seguida definimos x como sendo 5, y como sendo 6, e z para a adição de x com y.</p>
+        <p>Da mesma forma podemos fazer isso em uma única linha:</p>
+        <div class="code">
+            x = 5; y = 6; z = x + y;
+        </div>
+        <p>Outro ponto importante é que assim como o Html e o Css, o JavaScript ignora multiplos espaços. Sendo assim podemos utilizar essa funcionalidade para tornar os códigos mais legiveis! Uma boa pratica é separar com espaços operadores (= + - * /). Além disso instruções podem conter quebra de linhas, sendo o melhor canto para isso após um operador.</p>
+        <p>Também é importante saber que temos agrupamentos de instruções no JavaScript, isso é feito dentro das chaves {}, com o proposito de executar instruções juntas, um lugar que fazemos isso e vamos ver no nosso 5º topico de hoje são as funções!</p>
+        <p>Para finalizarmos as instruções do JavaScript temos as palavras-chave, essas que são colocadas no inicio de uma instrução do JavaScript, alguns exemplos são: var, let, const, if, switch, for, function, return, try, dentre diversos outros.</p>
+        <h3>Sintaxe:</h3>
+        <p>A sintaxe do JavaScript é definida em dois tipos: Valores fixos, e Valores variaveis. Sendo os Fixos chamados de literais, e os variaveis de variaveis.</p>
+        <p>As duas regras mais importantes literais são que numeros são escritos com ou sem decimais, no caso de números com decimais esses são separados por ponto e não por virgula. A outra regra é que strings são textos escritos entre aspas simples, ou aspas duplas.</p>
+        <div class="code">
+            x = 5; y = 6.81; z = 'John Doe';
+        </div>
+        <p>Outro tópico importante na sintaxe são os operadores matemáticos, que são mais+ (adição), menos- (subtração), asterisco* (multiplicação) e barra/ (divisão).</p>
+        <p>Em JavaScript o sinal de igual (=) é um operador de "atribuição", não um operador de "igual a". Para esse último utilizamos o sinal de igual duas vezes (==).</p>
+        <div class="code">
+            let x = 5; <br>
+            x = x + 5; <br>
+            x == 10;
+        </div>
+        <p>Neste exemplo definimos a variável x como sendo 5, em seguida, definimos x como sendo x mais cinco, ou seja, como x era 5 então x mais 5 resulta em x agora possuindo o valor de 10. Em seguida fazemos uma validação de x igual a 10, o que resulta no resultado true (verdadeiro), pois x realmente é igual a 10!</p>
+        <h4>Variáveis:</h4>
+        <p>Na programação, variáveis são usadas para armazenar valores de dados.</p>
+        <p>No JavaScript usamos as palavras-chave <em>var, let, e const</em> para declarar variáveis, com um simbolo de igual para definir o valor na variável.</p>
+        <p>Variáveis são declardas de 4 formas diferentes no JavaScript.</p>
+        <p>A primeira forma é "automática" quando não utilizamos uma palavra-chave, e damos um valor a uma variável, isso acontece devido o JavaScript ser de tipagem dinâmica como vimos anteriormente, mas não é uma boa prática utilizar dessa funcionalidade.</p>
+        <p>A segunda forma é utilizando a palavra-chave var, essa que era utilizada na antiga versão do JavaScript, e continua existindo para dar suporte a navegadores antigos.</p>
+        <p>A terceira forma, e a mais convecional, é utilizando as palavras-chave let e const.</p>
+        <p>Para saber quando se deve usar var, let ou const, pense nas seguintes afirmativas: Sempre declare suas variáveis, sempre use const quando um valor não deve ser alterado, sempre use const quando o tipo não deve ser alterado, apenas use let se você não puder usar const, e apenas use var se você precisa dar suporte a navegadores antigos.</p>
+        <p>Toda variável possui um identificador, ou nome, que são únicos, podendo ser curto (como x, y e z, vistos anteriormente), ou podendo ser mais descritiveis (como idade, soma, volumeTotal).</p>
+        <p>Existe uma regra simples para a criação desses identificadores, eles podem conter letras, digitos, travessões e cifrões.</p>
+        <p>Identificadores não podem começar com números apenas com letras, cifrão e travessão.</p>
+        <p>Identificadores são sensitiveis, ou seja, uma variável chamada "primeironome" e outra chamada "primeiroNome" (com o N maiúsculo) são variáveis diferentes.</p>
+        <p>Da mesma forma que palavras-chave também são sensitiveis, ou seja escrever let, com todas letras minusculas é a única forma que o JavaScript vai interpretar tal funcionalidade.</p>
+        <p>Por fim existem algumas palavras reservadas, como palavras-chave, que não podem ser usadas como identificadores.</p>
+
+        <h3>Exercicio desse tópico:</h3>
+        <p>Criem algumas variáveis diferentes no seu console, realizem operações com elas, e tentem encontrar os limites dos identificadores.</p>
+
+        <h2>5º topico: Definindo Funções em JavaScript</h2>
+        <p>Em JavaScript, você pode criar funções para executar tarefas específicas. Aqui está um exemplo de como definir uma função simples:</p>
+
+        <div class="code">
+            function saudacao() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Olá, mundo!");<br>
+            }<br>
+        </div>
+        <p>Aqui definimos a função "saudacao()", para que quando chamada ela registre no console de debug a frase "Olá, mundo!"</p>
+
+        <h3>Exercicio desse tópico:</h3>
+        <p>Criem uma função para cada operação matemática, que deve realizar operações com as variáveis criadas no tópico anterior.</p>
+
+        <h2>6º topico:Eventos em JavaScript</h2>
+        <p>Eventos são ações do usuário, como clicar em um botão ou mover o mouse. Você pode responder a esses eventos em JavaScript. Aqui está um exemplo de como ouvir um evento de clique em um botão:</p>
+
+        <div class="code">
+            const meuBotao = document.getElementById("meuBotao");<br>
+            meuBotao.addEventListener("click", function() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Botão clicado!");<br>
+            });<br>
+        </div>
+        <p>Aqui temos a criação de uma variável com o identificador meuBotao, que recebe o valor do documento html vinculado pegando especificamente o elemento html com o ID "meuBotao". Em seguida utilizamos a variável criada para fazer um "escutador de evento", esse que ao identificar o evento click vai realizar a function() de registrar no console o texto "Botão clicado!"</p>
+
+        <h3>Exercicio desse tópico:</h3>
+        <p>Vamos ao VS Code, criar arquivos html e js simples, que vão executar o código anterior, sendo assim devemos criar um código HTML que possua a tag de script que deve puxar o arquivo externo do JavaScript, além disso devemos ter um elemento no corpo do html com o id meuBotao, para que o código JavaScript possa executar o evento corretamente. Já no arquivo JavaScript apenas vamos criar a variável que vai armazenar o elemento html com ID meuBotao, e em seguida vamos criar o evento para ser escutado!</p>
+    </div>
+</body>
+</html>

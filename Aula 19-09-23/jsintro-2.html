@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao JavaScript</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h2>5º tópico: Definindo Funções em JavaScript</h2>
+        <p>Em JavaScript, você pode criar funções para executar tarefas específicas. Aqui está um exemplo de como definir uma função simples:</p>
+
+        <div class="code">
+            function saudacao() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Olá, mundo!");<br>
+            }<br>
+        </div>
+        <p>Aqui definimos a função "saudacao()", para que quando chamada ela registre no console de debug a frase "Olá, mundo!"</p>
+
+        <h3>Exercicio desse tópico:</h3>
+        <p>Criem uma função para cada operação matemática, que deve realizar operações com as variáveis criadas no tópico anterior.</p>
+
+        <h2>6º tópico:Eventos em JavaScript</h2>
+        <p>Eventos são ações do usuário, como clicar em um botão ou mover o mouse. Você pode responder a esses eventos em JavaScript. Aqui está um exemplo de como ouvir um evento de clique em um botão:</p>
+
+        <div class="code">
+            const meuBotao = document.getElementById("meuBotao");<br>
+            meuBotao.addEventListener("click", function() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Botão clicado!");<br>
+            });<br>
+        </div>
+        <p>Aqui temos a criação de uma variável com o identificador meuBotao, que recebe o valor do documento html vinculado pegando especificamente o elemento html com o ID "meuBotao". Em seguida utilizamos a variável criada para fazer um "escutador de evento", esse que ao identificar o evento click vai realizar a function() de registrar no console o texto "Botão clicado!"</p>
+
+        <h3>Exercicio desse tópico:</h3>
+        <p>Vamos ao VS Code, criar arquivos html e js simples, que vão executar o código anterior, sendo assim devemos criar um código HTML que possua a tag de script que deve puxar o arquivo externo do JavaScript, além disso devemos ter um elemento no corpo do html com o id meuBotao, para que o código JavaScript possa executar o evento corretamente. Já no arquivo JavaScript apenas vamos criar a variável que vai armazenar o elemento html com ID meuBotao, e em seguida vamos criar o evento para ser escutado!</p>
+
+        <p>Exemplo disponivel no arquivo <span style="background-color: darkorchid;">model1</span></p>
+
+        <h2>7º tópico:Saidas do JavaScript</h2>
+        <p>O JavaScript muitas vezes realiza ações que não são visiveis para os usuários, que apenas recebem o resultado da ação de uma forma mais pratica. O JavaScript possui diferentes formas de "saidas", sendo elas:</p>
+        <p>• Escrever em um elemento do HTML usando o <span style="background-color: blanchedalmond; color: crimson;">innerHTML</span>.</p>
+        <p>• Escrever o HTML usando o <span style="background-color: blanchedalmond; color: crimson;">document.write()</span>.</p>
+        <p>• Escrever em uma caixa de alerta usando <span style="background-color: blanchedalmond; color: crimson;">alert()</span>.</p>
+        <p>• Escrever no console do navegador usando o <span style="background-color: blanchedalmond; color: crimson;">console.log()</span>.</p>
+
+        <div class="code">
+            document.getElementById("demo").innerHTML = 5 + 6;<br>
+            document.write(5 + 6);<br>
+            window.alert(5 + 6);<br>
+            console.log(5 + 6);<br>
+
+        </div>
+        
+        <h3>Exercicio desse tópico:</h3>
+        <p>Acima temos os diferentes formas sendo colocados em prática. Vamos testa-las? Abra seu código e tente fazer os 4 funcionarem na sua pagina!</p>
+        <p>Agora finalmente sabemos fazer interações com o HTML, o que significa que podemos finalmente levar nosso JavaScript para a prática!</p>
+        
+        <h2>8º tópico:Tipos de dados JavaScript</h2>
+        <p>Bem como já vimos nós podemos criar diferentes tipos de váriaveis no JavaScript, mas quais são esses tipos?</p>
+        <p>Dentre esses tipos temos que saber que há uma segregação por questões práticas. Abaixo temos os tipos:</p>
+        <p>String - é usado para definir uma serie de caracteres qualquer (pode conter números, letras, simbolos...).</p>
+        <p>Number - é usado para definir um número qualquer (em JavaScript não existe um número propriamente inteiro, mesmo ao definir um número omitindo a parte decimal, ele ainda é como se fosse um número com decimais, isso pois em outras linguagens separamos os números em int de inteiros, e float/double de decimais).</p>
+        <p>Boolean - usado para definir um valor verdadeiro ou falso.</p>
+        <p>Undefined - quando o valor não é definido o tipo também é indefinido.</p>
+        <p>Object - são tipos de dados que armazenam diversos valores, por isso separamos esse tipo em 3 "subtipos", sendo eles vistos abaixo.</p>
+        <p>• Object - armazena propriedades e seus valores, e é escrito dentro de chaves {}.</p>
+        <p>• Array - armazena diversos items nas posições que foram adicionados, separados por vírgulas, e é escrito dentro de colchetes [].</p>
+        <p>• Date - armazena o valor de uma data, com ano, mês, dia, hora, minutos, segundos, milisegundos</p>
+        <br>
+        <p>Além desses tipos existem algumas outras definições no JavaScript mais avançadas, como o Bigint, Sets, Maps, Symbol.</p>
+        <h3>Exercicio desse tópico:</h3>
+        <p>Agora crie uma váriavel para cada tipo visto anteriormente, e tente coloca-las para serem exibidas em sua página HTMl.</p>
+
+        <script src="../meuScript.js"></script>
+</body>
+</html>
