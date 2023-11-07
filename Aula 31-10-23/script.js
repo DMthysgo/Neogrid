@@ -36,11 +36,11 @@ x <= 8 // true
 */
 
 function voto(idade) {
-let obrigadoVotar = (idade < 18) ? "Não é obrigado":"É obrigado"
+let obrigadoVotar = (idade < 18 && idade > 15) ? "Não é obrigado":"É obrigado"
 console.log(obrigadoVotar)
 }
 
-//document.addEventListener('contextmenu', function (event) {event.preventDefault();});
+document.addEventListener('contextmenu', function (event) {event.preventDefault();});
 /*
 document.addEventListener('mousedown', function (event) {console.log("Button: " + event.button);});
 */
@@ -60,11 +60,11 @@ document.addEventListener('keydown', function (event) {
 */
 
 /*
+*/
 document.addEventListener('keydown', function (event) {
-    if (event.key === 'a') {
+    if (event.key === 'a' && event.shiftKey) {
         console.log('Tecla "A" foi pressionada.');
     } else if (event.key === 'Enter') {
         console.log('Tecla "Enter" foi pressionada.');
     }
 });
-*/
