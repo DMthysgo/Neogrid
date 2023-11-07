@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculadora com Leitor de Texto</title>
     <style>
         #calculator {
             width: 300px;
@@ -35,22 +35,26 @@
         <button class="button" onclick="appendToDisplay('4')">4</button>
         <button class="button" onclick="appendToDisplay('5')">5</button>
         <button class="button" onclick="appendToDisplay('6')">6</button>
-        <button class="button" onclick="appendToDisplay('+')">+</button>
+        <button class="button" onclick="addition('+')">+</button>
         <br>
         <button class="button" onclick="appendToDisplay('1')">1</button>
         <button class="button" onclick="appendToDisplay('2')">2</button>
         <button class="button" onclick="appendToDisplay('3')">3</button>
-        <button class="button" onclick="appendToDisplay('-')">-</button>
+        <button class="button" onclick="subtraction('-')">-</button>
         <br>
         <button class="button" onclick="appendToDisplay('0')">0</button>
         <button class="button" onclick="appendToDisplay('.')">.</button>
         <button class="button" onclick="calculateResult()">=</button>
-        <button class="button" onclick="appendToDisplay('*')">*</button>
+        <button class="button" onclick="multiplication('*')">*</button>
         <br>
-        <button class="button" onclick="appendToDisplay('/')">/</button>
+        <button class="button" onclick="division('/')">/</button>
     </div>
 
+    <button id="speakButton" style="display: block; margin: 20px auto;" onclick="speakResult()">Ler Resultado</button>
+
     <script>
+        const speakButton = document.getElementById('speakButton');
+
         function appendToDisplay(value) {
             document.getElementById('display').value += value;
         }
@@ -59,12 +63,36 @@
             document.getElementById('display').value = '';
         }
 
+        function addition(operator) {
+            appendToDisplay(operator);
+        }
+
+        function subtraction(operator) {
+            appendToDisplay(operator);
+        }
+
+        function multiplication(operator) {
+            appendToDisplay(operator);
+        }
+
+        function division(operator) {
+            appendToDisplay(operator);
+        }
+
         function calculateResult() {
             try {
-                document.getElementById('display').value = eval(document.getElementById('display').value);
+                const result = eval(document.getElementById('display').value);
+                document.getElementById('display').value = result;
             } catch (error) {
                 document.getElementById('display').value = 'Erro';
             }
+        }
+
+        function speakResult() {
+            const result = document.getElementById('display').value;
+            const synth = window.speechSynthesis;
+            const utterance = new SpeechSynthesisUtterance(result);
+            synth.speak(utterance);
         }
     </script>
 </body>
